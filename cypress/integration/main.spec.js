@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000
 
 describe('Pinia demo with counters', () => {
   beforeEach(() => {
-    cy.visit(`http://localhost:${PORT}`)
+    cy.visit(`http://localhost:${PORT}/tabs/cart`)
   })
 
   it('works', () => {

@@ -3,24 +3,35 @@ import { RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Cart from '../views/Cart.vue'
+import Tabs from '../layouts/Tabs.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home',
+    redirect: '/tabs/home',
   },
   {
-    path: '/home',
-    component: Home,
-  },
-  {
-    path: '/about',
-    component: About,
-  },
-  {
-    path: '/cart',
-    component: Cart,
-  },
+    path: '/tabs/',
+    component: Tabs,
+    children: [
+      {
+        path: '',
+        redirect: 'home'
+      },
+      {
+        path: 'home',
+        component: Home,
+      },
+      {
+        path: 'about',
+        component: About,
+      },
+      {
+        path: 'cart',
+        component: Cart,
+      },
+    ]
+  }
 ]
 
 // https://vitejs.dev/guide/env-and-mode.html
