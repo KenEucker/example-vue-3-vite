@@ -1,0 +1,7 @@
+{
+  "name": "biketag-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

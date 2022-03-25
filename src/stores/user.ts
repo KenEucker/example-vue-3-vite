@@ -1,12 +1,12 @@
 // @ts-check
 import { defineStore, acceptHMRUpdate } from 'pinia'
 
-/**
- * Simulate a login
- * @param {string} a
- * @param {string} p
- */
-function apiLogin(a, p) {
+interface UserData {
+  name?: string
+  isAdmin: boolean
+}
+
+const apiLogin = (a: string, p: string): Promise<UserData> => {
   if (a === 'ed' && p === 'ed') return Promise.resolve({ isAdmin: true })
   if (p === 'ed') return Promise.resolve({ isAdmin: false })
   return Promise.reject(new Error('invalid credentials'))
@@ -14,7 +14,7 @@ function apiLogin(a, p) {
 
 export const useUserStore = defineStore({
   id: 'user',
-  state: () => ({
+  state: (): UserData => ({
     name: 'Eduardo',
     isAdmin: true,
   }),
@@ -31,10 +31,8 @@ export const useUserStore = defineStore({
 
     /**
      * Attempt to login a user
-     * @param {string} user
-     * @param {string} password
      */
-    async login(user, password) {
+    async login(user: string, password: string) {
       const userData = await apiLogin(user, password)
 
       this.$patch({

@@ -1,15 +1,13 @@
+<script setup lang="ts">
+import { version as piniaVersion } from 'pinia/package.json'
+import { version as vueVersion } from 'vue/package.json'
+import { version as IonicVersion } from '@ionic/core/package.json'
+import { IonFooter } from '@ionic/vue'
+</script>
+
 <template>
-  <header>
-    <h1>Pinia</h1>
-    <p>The intuitive store for Vue</p>
-  </header>
-
-  <slot />
-
-  <hr />
-
-  <footer>
-    <a href="https://github.com/posva/pinia">
+  <ion-footer>
+    <a href="https://github.com/keneucker/">
       <svg class="logo" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -18,18 +16,11 @@
           fill="currentColor"
         />
       </svg>
-      GitHub
-    </a> - by
-    <a href="https://github.com/posva">@posva</a> 2021
-    <br />
-    Using Vue v{{ vueVersion }} and Pinia v{{ piniaVersion }}.
-  </footer>
+      GitHub </a
+    ><slot /><br />
+    Using Vue v{{ vueVersion }} and Pinia v{{ piniaVersion }} and Ionic v{{ IonicVersion }}.
+  </ion-footer>
 </template>
-
-<script setup lang="ts">
-import { version as piniaVersion } from 'pinia/package.json'
-import { version as vueVersion } from 'vue/package.json'
-</script>
 
 <style scoped>
 .logo {

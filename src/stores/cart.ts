@@ -2,19 +2,23 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
 import { useUserStore } from './user'
 
+interface CartData {
+  name: string
+  amount: number
+}
+interface CartState {
+  rawItems: string[]
+}
+
 export const useCartStore = defineStore({
   id: 'cart',
-  state: () => ({
-    /** @type {string[]} */
+  state: (): CartState => ({
     rawItems: [],
   }),
   getters: {
-    /**
-     * @returns {Array<{ name: string; amount: number }>}
-     */
-    items: (state) =>
-      state.rawItems.reduce((items, item) => {
-        const existingItem = items.find((it) => it.name === item)
+    items: (state: CartState): Array<CartData> =>
+      state.rawItems.reduce((items: CartData[], item) => {
+        const existingItem = items.find((it: CartData) => it.name === item)
 
         if (!existingItem) {
           items.push({ name: item, amount: 1 })
@@ -26,19 +30,11 @@ export const useCartStore = defineStore({
       }, []),
   },
   actions: {
-    /**
-     * Add item to the cart
-     * @param {string} name
-     */
-    addItem(name) {
+    addItem(name: string) {
       this.rawItems.push(name)
     },
 
-    /**
-     * Remove item from the cart
-     * @param {string} name
-     */
-    removeItem(name) {
+    removeItem(name: string) {
       const i = this.rawItems.lastIndexOf(name)
       if (i > -1) this.rawItems.splice(i, 1)
     },
