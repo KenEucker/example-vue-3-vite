@@ -2,10 +2,7 @@
 import { ref } from 'vue'
 import AboutModal from '../components/AboutModal.vue'
 import Layout from '../layouts/DefaultLayout.vue'
-import {
-  IonModal,
-  IonButton,
-} from '@ionic/vue'
+import { IonModal, IonButton } from '@ionic/vue'
 
 const modalIsOpen = ref(false)
 const showModal = () => {
