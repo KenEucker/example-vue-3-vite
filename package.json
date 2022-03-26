@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "package": "yarn build && npx capacitor sync android && npx capacitor run android",
     "start": "vite serve",
     "test": "cypress run",
     "lint": "yarn lint:js && yarn lint:style",
@@ -12,6 +13,7 @@
     "lint:style": "stylelint \"./src/**/*.vue\" \"./src/**/*.scss\" --fix"
   },
   "dependencies": {
+    "@capacitor/android": "^3.4.3",
     "@capacitor/app": "1.1.1",
     "@capacitor/core": "3.4.3",
     "@capacitor/haptics": "1.1.4",
