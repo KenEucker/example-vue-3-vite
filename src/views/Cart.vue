@@ -36,7 +36,10 @@ window.stores = { user, cart }
 
 <template>
   <Layout title="Cart">
-    <div class="ion-justify-content-center .ion-nowrap" style="display: flex; flex-direction: column">
+    <div
+      class="ion-justify-content-center .ion-nowrap"
+      style="display: flex; flex-direction: column"
+    >
       <div style="margin: 1rem 0">
         <PiniaLogo />
       </div>

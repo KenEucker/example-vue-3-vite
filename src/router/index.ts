@@ -16,7 +16,7 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: '',
-        redirect: 'home'
+        redirect: 'home',
       },
       {
         path: 'home',
@@ -30,8 +30,8 @@ const routes: Array<RouteRecordRaw> = [
         path: 'cart',
         component: Cart,
       },
-    ]
-  }
+    ],
+  },
 ]
 
 // https://vitejs.dev/guide/env-and-mode.html

@@ -2,18 +2,19 @@
 import iHeader from '../components/IonicHeader.vue'
 import iFooter from '../components/IonicFooter.vue'
 import { IonContent, IonPage } from '@ionic/vue'
+import { defineProps } from 'vue'
 
 const props = defineProps({
   title: {
     type: String,
-    default: "Pinita"
-  }
+    default: 'Pinita',
+  },
 })
 </script>
 
 <template>
   <ion-page>
-    <i-header :title="title"/>
+    <i-header :title="props.title" />
     <ion-content fullscreen class="ion-padding">
       <slot />
 
