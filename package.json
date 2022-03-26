@@ -7,6 +7,7 @@
     "build": "vite build",
     "start": "vite serve",
     "test": "cypress run",
+    "package": "yarn build && npx capacitor sync ios && npx capacitor run ios",
     "lint": "yarn lint:js && yarn lint:style",
     "lint:js": "eslint --ext .ts,.js,.vue src --fix",
     "lint:style": "stylelint \"./src/**/*.vue\" \"./src/**/*.scss\" --fix"
@@ -15,6 +16,7 @@
     "@capacitor/app": "1.1.1",
     "@capacitor/core": "3.4.3",
     "@capacitor/haptics": "1.1.4",
+    "@capacitor/ios": "^3.4.3",
     "@capacitor/keyboard": "1.2.2",
     "@capacitor/status-bar": "1.0.8",
     "@ionic/vue": "^6.0.13",
