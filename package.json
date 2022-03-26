@@ -7,6 +7,9 @@
     "build": "vite build",
     "start": "vite serve",
     "test": "cypress run",
+    "clean": "rm -rf dist",
+    "capacitor:postpackage": "sed -i -e '/<!-- web app module -->/a\\\r\n<script src=\"capacitor.js\"></script>\r\n' dist/index.html",
+    "package": "yarn build && npx capacitor sync web && yarn capacitor:postpackage",
     "lint": "yarn lint:js && yarn lint:style",
     "lint:js": "eslint --ext .ts,.js,.vue src --fix",
     "lint:style": "stylelint \"./src/**/*.vue\" \"./src/**/*.scss\" --fix"
