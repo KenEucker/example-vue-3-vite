@@ -3,7 +3,12 @@ import App from './App.vue'
 import router from './router'
 import { createPinia } from 'pinia'
 
+import DashboardLayout from './layouts/DashboardLayout.vue'
+import DefaultLayout from './layouts/DefaultLayout.vue'
+import EmptyLayout from './layouts/EmptyLayout.vue'
+
 import { IonicVue } from '@ionic/vue'
+import './index.css'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css'
@@ -24,7 +29,11 @@ import '@ionic/vue/css/display.css'
 /* Theme variables */
 import './theme/variables.scss'
 
-const app = createApp(App).use(IonicVue).use(router).use(createPinia())
+const app = createApp(App)
+app.use(IonicVue).use(router).use(createPinia())
+app.component('DefaultLayout', DefaultLayout)
+app.component('DashboardLayout', DashboardLayout)
+app.component('EmptyLayout', EmptyLayout)
 
 router.isReady().then(() => {
   app.mount('#app')

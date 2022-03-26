@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import iHeader from '../components/IonicHeader.vue'
-import iFooter from '../components/IonicFooter.vue'
+import iHeader from '../components/DefaultHeader.vue'
+import iFooter from '../components/DefaultFooter.vue'
 import { IonContent, IonPage } from '@ionic/vue'
 import { defineProps } from 'vue'
 

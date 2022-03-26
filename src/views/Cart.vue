@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Layout from '../layouts/DefaultLayout.vue'
 import PiniaLogo from '../components/PiniaLogo.vue'
 
 import { ref } from 'vue'
@@ -31,41 +30,38 @@ async function buy() {
   cart.rawItems = []
 }
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 window.stores = { user, cart }
 </script>
 
 <template>
-  <Layout title="Cart">
-    <div
-      class="ion-justify-content-center .ion-nowrap"
-      style="display: flex; flex-direction: column"
-    >
-      <div style="margin: 1rem 0">
-        <PiniaLogo />
-      </div>
-
-      <h2>Hello {{ user.name }}</h2>
-
-      <form data-testid="add-items" @submit.prevent="addItemToCart">
-        <input v-model="itemName" type="text" />
-        <button>Add</button>
-      </form>
-
-      <form @submit.prevent="buy">
-        <ul data-testid="items">
-          <li v-for="item in cart.items" :key="item.name">
-            {{ item.name }} ({{ item.amount }})
-            <button type="button" @click="cart.removeItem(item.name)">X</button>
-          </li>
-        </ul>
-
-        <button :disabled="!user.name">Buy</button>
-        <button :disabled="!cart.items.length" type="button" data-testid="clear" @click="clearCart">
-          Clear the cart
-        </button>
-      </form>
+  <div class="ion-justify-content-center .ion-nowrap" style="display: flex; flex-direction: column">
+    <div style="margin: 1rem 0">
+      <PiniaLogo />
     </div>
-  </Layout>
+
+    <h2>Hello {{ user.name }}</h2>
+
+    <form data-testid="add-items" @submit.prevent="addItemToCart">
+      <input v-model="itemName" type="text" />
+      <button>Add</button>
+    </form>
+
+    <form @submit.prevent="buy">
+      <ul data-testid="items">
+        <li v-for="item in cart.items" :key="item.name">
+          {{ item.name }} ({{ item.amount }})
+          <button type="button" @click="cart.removeItem(item.name)">X</button>
+        </li>
+      </ul>
+
+      <button :disabled="!user.name">Buy</button>
+      <button :disabled="!cart.items.length" type="button" data-testid="clear" @click="clearCart">
+        Clear the cart
+      </button>
+    </form>
+  </div>
 </template>
 
 <style scoped>

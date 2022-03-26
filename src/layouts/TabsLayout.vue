@@ -10,6 +10,7 @@ import {
 } from '@ionic/vue'
 import { home, help, cart } from 'ionicons/icons'
 </script>
+
 <template>
   <ion-page>
     <ion-tabs>

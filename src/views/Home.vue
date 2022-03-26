@@ -1,9 +1,6 @@
-<script setup lang="ts">
-import Layout from '../layouts/DefaultLayout.vue'
-</script>
+<!-- eslint-disable vue/multi-word-component-names -->
+<script setup lang="ts"></script>
 
 <template>
-  <Layout title="Home">
-    <h1>Home</h1>
-  </Layout>
+  <h1>Home</h1>
 </template>
