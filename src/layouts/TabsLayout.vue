@@ -7,9 +7,12 @@ import {
   IonTabs,
   IonTabBar,
   IonRouterOutlet,
+  IonButton,
+  IonCol
 } from '@ionic/vue'
-import { home, help, cart } from 'ionicons/icons'
+import { home, help, cart, personCircleOutline } from 'ionicons/icons'
 </script>
+
 <template>
   <ion-page>
     <ion-tabs>
@@ -29,6 +32,11 @@ import { home, help, cart } from 'ionicons/icons'
           <ion-icon :icon="help" />
           <ion-label>About</ion-label>
         </ion-tab-button>
+
+        <ion-button color="medium" fill="clear" href="/login">
+          <ion-icon slot="icon-only" size="large" style="font-size: 30px;" :icon="personCircleOutline"></ion-icon>
+          <!-- <ion-label style="font-size: 10px;">Login</ion-label> -->
+        </ion-button>
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>

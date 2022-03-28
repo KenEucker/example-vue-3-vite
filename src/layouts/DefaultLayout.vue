@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import iHeader from '../components/IonicHeader.vue'
-import iFooter from '../components/IonicFooter.vue'
+import iHeader from '../components/DefaultHeader.vue'
+import iFooter from '../components/DefaultFooter.vue'
 import { IonContent, IonPage } from '@ionic/vue'
 import { defineProps } from 'vue'
 
@@ -20,7 +20,7 @@ const props = defineProps({
 
       <hr />
 
-      <i-footer> - by <a href="https://github.com/keneucker">@keneucker</a> 2022 </i-footer>
+      <i-footer> - by <a href="https://github.com/keneucker">@keneucker</a> and <a href="https://github.com/ehoraizon">@ehoraizon</a> 2022 </i-footer>
     </ion-content>
   </ion-page>
 </template>

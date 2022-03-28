@@ -13,7 +13,7 @@ const props = defineProps({
 <template>
   <ion-header class="header">
     <ion-toolbar class="header__toolbar">
-      <ion-title class="ion-padding-start">{{ props.title }}</ion-title>
+      <ion-title>{{ props.title }}</ion-title>
     </ion-toolbar>
     <slot />
   </ion-header>

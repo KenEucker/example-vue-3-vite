@@ -6,9 +6,9 @@ import { IonFooter } from '@ionic/vue'
 </script>
 
 <template>
-  <ion-footer>
-    <a href="https://github.com/keneucker/">
-      <svg class="logo" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ion-footer class="ion-margin-top">
+    <a href="https://github.com/KenEucker/vue3-pinia-ionic-capacitor-vite">
+      <svg style="display: inline" class="logo" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
