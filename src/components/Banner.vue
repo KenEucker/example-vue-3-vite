@@ -4,7 +4,7 @@ const open = ref(true)
 </script>
 
 <template>
-  <div v-show="open" class="fixed bottom-0 right-0 w-full md:bottom-8 md:right-12 md:w-auto z-60">
+  <div v-show="open" class="fixed bottom-0 right-0 w-full md:bottom-8 md:right-12 md:w-auto z-60" style="z-index: 99;">
     <div class="flex justify-between p-3 text-sm bg-gray-800 shadow-lg text-gray-50 md:rounded">
       <div>
         👉

@@ -46,10 +46,10 @@ const inactiveClass = ref(
 
       <nav class="mt-10">
         <p class="pl-4 mb-4 text-xs font-semibold text-gray-400">GENERAL</p>
-        <a
+        <router-link
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
           :class="[$route.name === 'Dashboard' ? activeClass : inactiveClass]"
-          href="/dashboard"
+          to="/dashboard"
         >
           <svg
             class="w-5 h-5"
@@ -67,13 +67,13 @@ const inactiveClass = ref(
           </svg>
 
           <span class="mx-4">Dashboard</span>
-        </a>
+        </router-link>
         <p class="pl-4 my-2 mb-4 text-xs font-semibold text-gray-400">Examples</p>
 
-        <a
+        <router-link
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
           :class="[$route.name === 'UIElements' ? activeClass : inactiveClass]"
-          href="/ui-elements"
+          to="/ui-elements"
         >
           <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -95,12 +95,12 @@ const inactiveClass = ref(
           </svg>
 
           <span class="mx-4">UI Elements</span>
-        </a>
+        </router-link>
 
-        <a
+        <router-link
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
           :class="[$route.name === 'Tables' ? activeClass : inactiveClass]"
-          href="/tables"
+          to="/tables"
         >
           <svg class="w-5 h-5" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -118,12 +118,12 @@ const inactiveClass = ref(
           </svg>
 
           <span class="mx-4">Tables</span>
-        </a>
+        </router-link>
 
-        <a
+        <router-link
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
           :class="[$route.name === 'Forms' ? activeClass : inactiveClass]"
-          href="/forms"
+          to="/forms"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -137,12 +137,12 @@ const inactiveClass = ref(
           </svg>
 
           <span class="mx-4">Forms</span>
-        </a>
+        </router-link>
 
-        <a
+        <router-link
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
           :class="[$route.name === 'Cards' ? activeClass : inactiveClass]"
-          href="/cards"
+          to="/cards"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -159,12 +159,12 @@ const inactiveClass = ref(
           </svg>
 
           <span class="mx-4">Cards</span>
-        </a>
+        </router-link>
 
-        <a
+        <router-link
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
           :class="[$route.name === 'Modal' ? activeClass : inactiveClass]"
-          href="/modal"
+          to="/modal"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -180,12 +180,12 @@ const inactiveClass = ref(
           </svg>
 
           <span class="mx-4">Modal</span>
-        </a>
+        </router-link>
 
-        <a
+        <router-link
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
           :class="[$route.name === 'Blank' ? activeClass : inactiveClass]"
-          href="/blank"
+          to="/blank"
         >
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
             <path
@@ -194,13 +194,13 @@ const inactiveClass = ref(
           </svg>
 
           <span class="mx-4">Blank</span>
-        </a>
+        </router-link>
         <p class="pl-4 my-2 mb-4 text-xs font-semibold text-gray-400">About</p>
-        <a
+        <router-link
           target="_blank"
           class="flex items-center px-6 py-2 mt-4 duration-200 border-l-4"
           :class="[$route.name === 'Blank' ? activeClass : inactiveClass]"
-          href="https://github.com/tal7aouy"
+          to="https://github.com/tal7aouy"
         >
           <svg
             class="w-5 h-5 fill-current"
@@ -214,7 +214,7 @@ const inactiveClass = ref(
           </svg>
 
           <span class="mx-4">Github</span>
-        </a>
+        </router-link>
       </nav>
     </div>
   </div>

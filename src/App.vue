@@ -12,9 +12,10 @@ const layout = computed(() => {
 </script>
 
 <template>
-  <ion-app>
-    <component :is="layout">
-      <ion-router-outlet />
-    </component>
+  <component v-if="layout == 'DashboardLayout'" :is="layout">
+    <router-view />
+  </component>
+  <ion-app v-else>
+    <ion-router-outlet/>
   </ion-app>
 </template>

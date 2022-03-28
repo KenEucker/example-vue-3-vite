@@ -20,7 +20,7 @@ const props = defineProps({
 
       <hr />
 
-      <i-footer> - by <a href="https://github.com/keneucker">@keneucker</a> 2022 </i-footer>
+      <i-footer> - by <a href="https://github.com/keneucker">@keneucker</a> and <a href="https://github.com/ehoraizon">@ehoraizon</a> 2022 </i-footer>
     </ion-content>
   </ion-page>
 </template>

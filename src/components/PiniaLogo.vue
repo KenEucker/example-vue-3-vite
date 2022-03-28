@@ -56,7 +56,7 @@ onMounted(() => {
 <template>
   <svg
     class="pinia-container"
-    width="408"
+    width="100%"
     height="520"
     viewBox="0 0 408 520"
     fill="none"

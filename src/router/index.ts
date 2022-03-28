@@ -17,6 +17,10 @@ import NotFound from '../views/NotFound.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    redirect: '/tabs',
+  },
+  {
+    path: '/login',
     name: 'Login',
     component: Login,
     meta: { layout: 'Empty' },
