@@ -1,10 +1,10 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'biketag-app',
+  appId: 'io.ionic-vue3-pinia.starter',
+  appName: 'ionic-app',
   webDir: 'dist',
-  bundledWebRuntime: false
-};
+  bundledWebRuntime: false,
+}
 
-export default config;
+export default config
